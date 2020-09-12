@@ -1,0 +1,36 @@
+{% extends "posts/layout.html" %}
+
+{% block body %}
+
+<div class="container" id="formwrap2" style = "border:1px solid black;">
+<form action="{% url 'create_post' %}" method="POST" class="form-group" id="postform">
+  {% csrf_token %}
+{{ form.non_field_errors }}
+
+<div class="form-group">
+  {{ form.title.errors }}
+  <label for="{{ form.title.id_for_label }}">Post Title:</label>
+    {{ form.title }}
+</div>
+<div class="form-group">
+  {{ form.image_.errors }}
+  <label for="{{ form.image_url.id_for_label }}">Image URL:</label>
+    {{ form.image_url }}
+</div>
+<div class="form-group">
+  {{ form.content.errors }}
+  <label for="{{ form.content.id_for_label }}">Content:</label>
+    {{ form.content }}
+</div>
+<div class="form-group">
+  {{ form.sub.errors }}
+  <label for="{{ form.sub.id_for_label }}">SubLounge:</label>
+    {{ form.sub }}
+</div>
+
+<input type="submit" class="btn btn-primary"> 
+</form>
+
+</div>
+
+{% endblock %}

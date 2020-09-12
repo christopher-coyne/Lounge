@@ -1,0 +1,12 @@
+{% extends "posts/layout.html" %}
+
+{% block body %}
+
+{{ message }}
+<form action="{% url 'create_sub' %}" method="POST">
+  {% csrf_token %}
+{{ form }}
+<input class="btn btn-primary" type="submit">
+</form>
+
+{% endblock %}

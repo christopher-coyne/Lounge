@@ -1,0 +1,9 @@
+{% extends "posts/layout.html" %}
+
+{% block body %}
+  <h1>Name of Sub: {{ subname }}</h1>
+  {% for s in subposts%}
+  <h2>s.title</h2>
+  {% endfor %}
+
+{% endblock %}

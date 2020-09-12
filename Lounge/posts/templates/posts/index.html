@@ -1,0 +1,30 @@
+{% extends "posts/layout.html" %}
+
+{% block body %}
+{{ message }}
+
+<h1>Sub names:</h1>
+{% for sub in sublist %}
+<h2>{{ sub.name }}</h2>
+{% endfor %}
+
+<h1>Post names:</h1>
+<div class="container">
+{% for post in postlist %}
+  <div class="lounge-post">
+    <i class="far fa-caret-square-up fa-lg"></i>
+    <div class="post-upvotes">{{ post.upvotes }}</div>
+    <i class="far fa-caret-square-down fa-lg"></i>
+    <i class="fas fa-align-right fa-3x"></i>
+    <div class="post-title">{{ post.title }}</div>
+    <div class="post-content">{{ post.content }}</div>
+    <div class="post-poster">Posted by {{ post.poster.username }}</div>
+    <i class="far fa-comment-dots"></i> Comments
+    <div class="post-save">Save</div>
+  </div>
+{% endfor %}
+</div>
+
+<h1>posts</h1>
+<div class="x" id="tester">Hey</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'posts/layout.html' %}
+
+{% block body %}
+<h1>Post:</h1>
+<div class="container" id="post-box"></div>
+<div class="post-poster">Posted by {{ post.poster }} however many days ago. Edited 2 days ago</div>
+<div class="post-title">{{ post.title }}</div>
+{{ post.content }}
+</div>
+
+<h1>Add a comment:</h1>
+<form action="{{ request.path }}" method="POST">
+  {% csrf_token %}
+{{ form }}
+<input type="submit" class="btn btn-primary"> 
+</form>
+
+<h1>Comments:</h1>
+<div id="comment-section">
+{% for c in comments %}
+<div class="comment">
+  <div class="comment-poster"> {{c.poster}}</div>
+  <div class="comment-date">posted so and so ago</div>
+  <div class="comment-content"> {{c.content}} </div>
+  <div class="comment-upvotes"> {{c.upvotes}}</div>
+  <div class="comment-reply">reply</div>
+</div>
+</div>
+{% endfor %}
+{% endblock %}

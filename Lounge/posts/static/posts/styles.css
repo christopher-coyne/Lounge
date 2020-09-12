@@ -1,0 +1,58 @@
+h1 {
+  color: red;
+}
+
+.lounge-post {
+  background-color: lightgray!important;
+  margin: 10px 0px;
+}
+
+#formwrap {
+  position: relative;
+  border: 2px, solid, red;
+}
+
+#tester {
+  background-color: cyan!important;
+}
+
+/* Post's page */
+#post-box {
+  background-color: white;
+}
+
+.post-title {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.post-poster {
+  font-weight: lighter;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+.post-content {
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+
+/* Comments */
+#comment-section {
+  background-color: grey;
+}
+
+.comment {
+  background-color: lightgray;
+  border: 1px solid blue;
+}
+
+.comment-poster {
+  font-weight: bold;
+  color: blue;
+}
