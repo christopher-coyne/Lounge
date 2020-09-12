@@ -8,6 +8,8 @@ from django.urls import reverse
 from posts.models import User, Post, Comment, Subreddit
 # Create your views here.
 
+#testing branch comment
+
 #FORMS
 class NewPost(forms.Form):
   #poster already provided in user
